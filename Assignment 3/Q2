@@ -1,0 +1,32 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetOperations {
+
+    public static void main(String[] args) {
+       
+        Set<String> nameSet = new HashSet<>();
+
+   
+        nameSet.add("Alice");
+        nameSet.add("Bob");
+        nameSet.add("Charlie");
+
+        
+        nameSet.remove("Bob");
+
+       
+        String checkName = "Charlie";
+        if (nameSet.contains(checkName)) {
+            System.out.println(checkName + " is present in the set.");
+        } else {
+            System.out.println(checkName + " is not present in the set.");
+        }
+
+        
+        System.out.println("Names in the set:");
+        for (String name : nameSet) {
+            System.out.println(name);
+        }
+    }
+}
