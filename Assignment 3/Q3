@@ -1,0 +1,24 @@
+import java.util.PriorityQueue;
+
+public class PriorityQueueOperations {
+
+    public static void main(String[] args) {
+       
+        PriorityQueue<String> priorityQueue = new PriorityQueue<>((a, b) -> a.compareTo(b)); // Default priority order
+
+       
+        priorityQueue.add("John"); 
+        priorityQueue.add("Alice"); 
+        priorityQueue.add("Bob"); 
+
+  
+        String highestPriority = priorityQueue.poll(); 
+        System.out.println("Removed employee with highest priority: " + highestPriority);
+
+
+        System.out.println("Remaining employees in the queue:");
+        for (String employee : priorityQueue) {
+            System.out.println(employee);
+        }
+    }
+}
