@@ -1,0 +1,25 @@
+public class BirthYearCalculator {
+
+    public static void main(String[] args) {
+        int currentYear = 2073;
+        int eligibilityAge = 21;
+        int thresholdYear = 2060;
+        int referenceYear = 2023;
+
+        // Calculate the birth year
+        int birthYear = currentYear - eligibilityAge;
+
+        // Determine if the birth year is more than the threshold year
+        if (birthYear > thresholdYear) {
+            // Calculate years between the person's vote-eligible year and 2023
+            int yearsBetween = referenceYear - birthYear;
+            System.out.println("The person's birth year is " + birthYear + ".");
+            System.out.println("Years between the person's vote-eligible year and 2023: " + yearsBetween + " years.");
+        } else {
+            // Calculate the median of the birth year and 2023
+            int median = (birthYear + referenceYear) / 2;
+            System.out.println("The person's birth year is " + birthYear + ".");
+            System.out.println("Median of birth year and 2023: " + median + ".");
+        }
+    }
+}
