@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class FizzBuzz {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input an integer n from the user
+        System.out.print("Enter an integer n: ");
+        int n = scanner.nextInt();
+
+        // Create an array to hold the results
+        String[] answer = new String[n];
+
+        // Populate the array with FizzBuzz results
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                answer[i - 1] = "FizzBuzz";
+            } else if (i % 3 == 0) {
+                answer[i - 1] = "Fizz";
+            } else if (i % 5 == 0) {
+                answer[i - 1] = "Buzz";
+            } else {
+                answer[i - 1] = String.valueOf(i); // Convert integer to string
+            }
+        }
+
+        // Display the results
+        for (String str : answer) {
+            System.out.println(str);
+        }
+
+        scanner.close();
+    }
+}
+
