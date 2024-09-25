@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class MinutesToYearsDays {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for input in minutes
+        System.out.print("Enter the number of minutes: ");
+        long minutes = scanner.nextLong();
+
+        // Convert minutes to years and days
+        long minutesInYear = 60 * 24 * 365;  // Total minutes in a year
+        long years = minutes / minutesInYear;
+        long remainingMinutes = minutes % minutesInYear;
+        long days = remainingMinutes / (60 * 24);  // Total minutes in a day
+
+        // Display the result
+        System.out.println(minutes + " minutes is approximately " + years + " years and " + days + " days.");
+
+        scanner.close();
+    }
+}
