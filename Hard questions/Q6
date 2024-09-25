@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class LengthOfLastWord {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input a string from the user
+        System.out.print("Enter a string: ");
+        String inputString = scanner.nextLine();
+
+        // Split the string into words
+        String[] words = inputString.trim().split(" +"); // Split by one or more spaces
+
+        // Get the last word
+        String lastWord = words[words.length - 1];
+
+        // Get the length of the last word
+        int lengthOfLastWord = lastWord.length();
+
+        // Display the result
+        System.out.println("Length of the last word: " + lengthOfLastWord);
+
+        scanner.close();
+    }
+}
+
