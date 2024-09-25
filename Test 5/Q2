@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class InchesToMeters {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user for inches input
+        System.out.print("Enter length in inches: ");
+        double inches = scanner.nextDouble();
+
+        // Convert inches to meters
+        double meters = inches * 0.0254;
+
+        // Display the result
+        System.out.println(inches + " inches is equal to " + meters + " meters");
+
+        scanner.close();
+    }
+}
