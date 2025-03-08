@@ -1,0 +1,9 @@
+class Datatypes{
+public static void main(String[] args){
+int a=3,b=5;
+double r=4.5,pi=3.14,Area;
+char word='a';
+String="car is mine";
+System.out.println(a+b);
+System.out.println(3,14*4.5*4.5);
+System.out.println(word);
